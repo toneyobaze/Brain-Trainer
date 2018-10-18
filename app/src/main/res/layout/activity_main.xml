@@ -29,6 +29,8 @@
         android:background="@android:color/holo_purple"
         android:padding="10dp"
         android:text="30s"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
         android:textSize="30sp" />
 
     <TextView
@@ -41,6 +43,8 @@
         android:background="@android:color/holo_orange_light"
         android:padding="10dp"
         android:text="0/0"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
         android:textSize="30sp" />
 
     <TextView
@@ -53,4 +57,65 @@
         android:text="31 + 12"
         android:textColor="@android:color/background_dark"
         android:textSize="25sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="398dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="31dp">
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="179dp"
+            android:layout_height="207dp"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:background="@android:color/holo_green_light"
+            android:onClick="chooseAnswer"
+            android:tag="0"
+            android:text="3"
+            android:textSize="80sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="182dp"
+            android:layout_height="198dp"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:background="@android:color/holo_green_light"
+            android:onClick="chooseAnswer"
+            android:tag="1"
+            android:text="3"
+            android:textSize="80sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="chooseAnswer"
+            android:tag="2"
+            android:text="3"
+            android:textSize="80sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="chooseAnswer"
+            android:tag="3"
+            android:text="3"
+            android:textSize="80sp" />
+    </GridLayout>
 </RelativeLayout>
