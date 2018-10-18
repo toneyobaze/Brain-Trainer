@@ -86,7 +86,7 @@
             android:layout_column="1"
             android:layout_gravity="fill"
             android:layout_row="0"
-            android:background="@android:color/holo_red_dark"
+            android:background="#f9c320"
             android:onClick="chooseAnswer"
             android:tag="1"
             android:text="3"
@@ -126,6 +126,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="56dp"
-        android:text="Correct!"
         android:textSize="40sp" />
 </RelativeLayout>

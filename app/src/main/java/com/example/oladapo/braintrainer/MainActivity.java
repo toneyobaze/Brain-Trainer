@@ -2,6 +2,7 @@ package com.example.oladapo.braintrainer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,13 +13,29 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     Button startButton;
+    TextView resultTextView;
     ArrayList<Integer> answers = new ArrayList<Integer>();
     int locationOfCorrectAnswer;
     Button button0;
     Button button1;
     Button button2;
     Button button3;
+    int score = 0;
 
+    public void chooseAnswer (View view) {
+
+            if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswer))) {
+
+                score++;
+                resultTextView.setText("Correct!");
+
+            } else {
+
+                resultTextView.setText("Wrong!");
+
+            }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
+        resultTextView = findViewById(R.id.resultTextView);
 
         TextView sumTextView = findViewById(R.id.sumTextView);
 
