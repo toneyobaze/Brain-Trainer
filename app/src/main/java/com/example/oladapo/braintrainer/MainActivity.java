@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     TextView sumTextView;
     TextView timerTextView;
     Button playAgainButton;
+    RelativeLayout gameRelativeLayout;
 
     public void playAgain(View view) {
 
@@ -37,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         resultTextView.setText("");
         playAgainButton.setVisibility(View.INVISIBLE);
 
-        new CountDownTimer(3100, 1000) {
+        generateQusetion();
+
+        new CountDownTimer(30100, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished){
@@ -133,6 +137,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startButton.setVisibility(View.INVISIBLE);
+                gameRelativeLayout.setVisibility(RelativeLayout.VISIBLE);
+
+                playAgain(findViewById(R.id.playAgainButton));
             }
         });
 
@@ -145,10 +152,8 @@ public class MainActivity extends AppCompatActivity {
         sumTextView = findViewById(R.id.sumTextView);
         timerTextView = findViewById(R.id.timerTextView);
         playAgainButton = findViewById(R.id.playAgainButton);
+        gameRelativeLayout = findViewById(R.id.gameRelativeLayout);
 
-        generateQusetion();
-
-        playAgain(findViewById(R.id.playAgainButton));
 
     }
 }
