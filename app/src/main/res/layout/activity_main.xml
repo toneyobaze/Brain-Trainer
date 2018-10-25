@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@android:color/holo_red_light"
-        android:onClick="start"
         android:padding="40dp"
         android:text="Go!"
         android:textColor="@android:color/background_light"
@@ -42,12 +41,12 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="122dp"
+            android:layout_marginTop="101dp"
             android:padding="10dp">
 
             <Button
                 android:id="@+id/button0"
-                android:layout_width="138dp"
+                android:layout_width="170dp"
                 android:layout_height="127dp"
                 android:layout_column="0"
                 android:layout_gravity="fill"

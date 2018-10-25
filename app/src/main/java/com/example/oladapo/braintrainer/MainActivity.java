@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -16,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button startButton;
     TextView resultTextView;
     TextView pointsTextView;
-    ArrayList<Integer> answers = new ArrayList<Integer>();
+    ArrayList<Integer> answers = new ArrayList<>();
     int locationOfCorrectAnswer;
     Button button0;
     Button button1;
@@ -56,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
                 playAgainButton.setVisibility(View.VISIBLE);
                 timerTextView.setText("0s");
                 resultTextView.setText("Your Score: " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+                button0.setEnabled(false);
+                button1.setEnabled(false);
+                button2.setEnabled(false);
+                button3.setEnabled(false);
 
             }
 
@@ -122,10 +125,13 @@ public class MainActivity extends AppCompatActivity {
             }
 
             numberOfQuestions++;
-            pointsTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+            pointsTextView.setText(Integer.toString(score) + "%d" + Integer.toString(numberOfQuestions));
             generateQusetion();
 
     }
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 gameRelativeLayout.setVisibility(RelativeLayout.VISIBLE);
 
                 playAgain(findViewById(R.id.playAgainButton));
+
             }
         });
 
@@ -153,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
         timerTextView = findViewById(R.id.timerTextView);
         playAgainButton = findViewById(R.id.playAgainButton);
         gameRelativeLayout = findViewById(R.id.gameRelativeLayout);
-
 
     }
 }
