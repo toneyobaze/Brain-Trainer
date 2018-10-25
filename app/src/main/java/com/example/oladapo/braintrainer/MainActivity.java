@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button startButton;
     TextView resultTextView;
     TextView pointsTextView;
-    ArrayList<Integer> answers = new ArrayList<>();
+    ArrayList<Integer> answers = new ArrayList<Integer>();
     int locationOfCorrectAnswer;
     Button button0;
     Button button1;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         generateQuestion();
 
-        new CountDownTimer(30100, 1000) {
+        new CountDownTimer(3100, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished){
@@ -108,6 +108,11 @@ public class MainActivity extends AppCompatActivity {
         button2.setText(Integer.toString(answers.get(2)));
         button3.setText(Integer.toString(answers.get(3)));
 
+        button0.setEnabled(true);
+        button1.setEnabled(true);
+        button2.setEnabled(true);
+        button3.setEnabled(true);
+
     }
 
 
@@ -125,13 +130,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             numberOfQuestions++;
-            pointsTextView.setText(Integer.toString(score) + "%d" + Integer.toString(numberOfQuestions));
+            pointsTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
             generateQuestion();
 
     }
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
                 gameRelativeLayout.setVisibility(RelativeLayout.VISIBLE);
 
                 playAgain(findViewById(R.id.playAgainButton));
-
             }
         });
 
