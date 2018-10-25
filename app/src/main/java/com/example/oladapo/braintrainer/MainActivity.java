@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         resultTextView.setText("");
         playAgainButton.setVisibility(View.INVISIBLE);
 
-        generateQusetion();
+        generateQuestion();
 
         new CountDownTimer(30100, 1000) {
 
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void generateQusetion() {
+    public void generateQuestion() {
 
         Random rand = new Random();
 
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
             numberOfQuestions++;
             pointsTextView.setText(Integer.toString(score) + "%d" + Integer.toString(numberOfQuestions));
-            generateQusetion();
+            generateQuestion();
 
     }
 
